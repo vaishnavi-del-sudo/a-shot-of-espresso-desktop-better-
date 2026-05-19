@@ -1,0 +1,12 @@
+node_modules/
+.pnpm-store/
+.pnpm/
+dist/
+build/
+.env
+.env.local
+*.log
+vite-debug.log*
+vite-debug.err*
+desktop.ini
+.modules.yaml

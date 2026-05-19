@@ -1,0 +1,11 @@
+packages:
+  - backend
+  - frontend
+
+allowBuilds:
+  electron: true
+  esbuild: true
+
+onlyBuiltDependencies:
+  - electron
+  - esbuild

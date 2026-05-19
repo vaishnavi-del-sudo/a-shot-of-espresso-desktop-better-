@@ -1,0 +1,16 @@
+{
+  "name": "a-shot-of-espresso",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Cozy Electron focus timer with floating study companions.",
+  "scripts": {
+    "dev": "concurrently \"pnpm backend\" \"pnpm frontend\"",
+    "backend": "pnpm --filter a-shot-of-espresso-backend dev",
+    "frontend": "pnpm --filter a-shot-of-espresso-frontend electron-dev",
+    "build": "pnpm --filter a-shot-of-espresso-frontend react-build",
+    "electron-build": "pnpm --filter a-shot-of-espresso-frontend electron-build"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}

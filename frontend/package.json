@@ -1,0 +1,41 @@
+{
+  "name": "a-shot-of-espresso-frontend",
+  "version": "1.0.0",
+  "private": true,
+  "main": "public/electron.js",
+  "homepage": "./",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1 --port 3000",
+    "react-start": "vite --host 127.0.0.1 --port 3000",
+    "react-build": "vite build",
+    "electron-dev": "concurrently \"pnpm react-start\" \"wait-on http://127.0.0.1:3000 && electron .\"",
+    "electron-build": "pnpm react-build && electron-builder",
+    "start": "electron ."
+  },
+  "dependencies": {
+    "@vitejs/plugin-react": "^4.3.4",
+    "axios": "^1.7.9",
+    "lucide-react": "^0.468.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "vite": "^6.0.7"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "electron": "^33.2.1",
+    "electron-builder": "^25.1.8",
+    "wait-on": "^8.0.1"
+  },
+  "build": {
+    "appId": "com.ashotofespresso.app",
+    "productName": "A Shot of Espresso",
+    "files": [
+      "dist/**/*",
+      "public/**/*",
+      "node_modules/**/*"
+    ],
+    "directories": {
+      "buildResources": "public"
+    }
+  }
+}
